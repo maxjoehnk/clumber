@@ -1,0 +1,29 @@
+record description {
+  name: string,
+  version: string,
+  blocks: list<block>,
+}
+
+record block {
+  identifier: string,
+  description: string,
+  blocktype: blocktype,
+  args: list<blockarg>,
+}
+
+record blockarg {
+  name: string,
+  argtype: argtype,
+  required: bool,
+}
+
+enum blocktype {
+  step,
+  stage
+}
+
+enum argtype {
+  text
+}
+
+describe: function() -> description

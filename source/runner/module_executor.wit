@@ -1,0 +1,12 @@
+resource executor {
+    static new: function() -> executor
+
+    os: function() -> os
+    spawn: function(command: string)
+}
+
+enum os {
+    linux,
+    macos,
+    windows
+}
